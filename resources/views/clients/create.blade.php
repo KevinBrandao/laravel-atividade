@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- copie e cole em seu site -->
+    <div id="ebrom_chat" data-empresa-uuid="b6ce8eaf-8585-4134-be19-a32b04f779dc"></div>
+    <link type="stylesheet" href="https://temp.ebrom.app/widget/eb_chat.css" />
+    <script type="text/javascript" src="https://temp.ebrom.app/widget/eb_chat.js"></script>
     <form action="/clients/store" method="post">
         @csrf
         <input name="name" placeholder="Nome">

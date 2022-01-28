@@ -103,7 +103,7 @@ class ClientController extends Controller
     }
     public function bills(Client $client)
     {
-        $bills = Bill::where('client_id', '=', $client->id);
+        $bills = Bill::where('client_id', '=', $client->id)->get();
         return response()->json($bills);
     }
 }
