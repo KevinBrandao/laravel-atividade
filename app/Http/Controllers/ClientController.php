@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bill;
+use App\Models\Client;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
-use App\Models\Client;
 
 class ClientController extends Controller
 {
@@ -100,9 +101,9 @@ class ClientController extends Controller
         $client = Client::where('name', 'like',"%$text%")->get();
         return response()->json($client);
     }
-    public function contas($contas)
+    public function bills(Client $client)
     {
-        $client = Client::where('client_id', '=', 'id_number')->get();
-        return response()->json($contas);
+        $bills = Bill::where('client_id', '=', $client->id);
+        return response()->json($bills);
     }
 }
