@@ -100,4 +100,9 @@ class ClientController extends Controller
         $client = Client::where('name', 'like',"%$text%")->get();
         return response()->json($client);
     }
+    public function contas($contas)
+    {
+        $client = Client::where('client_id', '=', 'id_number')->get();
+        return response()->json($contas);
+    }
 }
