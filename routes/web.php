@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ClientController::class, 'create']);
 
-Route::post('/clients/store', [ClientController::class, 'store']);
+Route::post('/clients/store', [ClientController::class, 'store'
+]);
 
 Route::get('/clients/show/{client}',[ClientController::class, 'show']);
 
