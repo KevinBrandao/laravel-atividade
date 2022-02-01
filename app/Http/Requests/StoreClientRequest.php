@@ -24,7 +24,16 @@ class StoreClientRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|mimes:jpg,bmp,png',
+            'email' => 'required'
+        ];
+    }
+    public function messagens()
+    {
+        return[
+            'name.required' => 'Um nome é obrigatório',
+            'name.mimes' => 'Extensão não suportada',
+            'email.required' => 'A descrição é obrigatoria'
         ];
     }
 }

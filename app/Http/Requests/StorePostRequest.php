@@ -31,7 +31,7 @@ class StorePostRequest extends FormRequest
     public function messagens()
     {
         return[
-            'name.required' => 'A imagem é obrigatória',
+            'name.required' => 'Um nome é obrigatório',
             'name.mimes' => 'Extensão não suportada',
             'email.required' => 'A descrição é obrigatoria'
         ];
