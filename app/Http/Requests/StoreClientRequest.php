@@ -28,7 +28,7 @@ class StoreClientRequest extends FormRequest
             'email' => 'required'
         ];
     }
-    public function messagens()
+    public function messages()
     {
         return[
             'name.required' => 'Um nome é obrigatório',

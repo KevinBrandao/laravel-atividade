@@ -1,3 +1,8 @@
+@if($errors->any())
+
+   {{dd($errors)}}
+@endif
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
