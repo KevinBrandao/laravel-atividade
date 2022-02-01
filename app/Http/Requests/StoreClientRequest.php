@@ -24,7 +24,7 @@ class StoreClientRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|mimes:jpg,bmp,png',
+            'name' => 'required',
             'email' => 'required'
         ];
     }
@@ -32,8 +32,7 @@ class StoreClientRequest extends FormRequest
     {
         return[
             'name.required' => 'Um nome é obrigatório',
-            'name.mimes' => 'Extensão não suportada',
-            'email.required' => 'A descrição é obrigatoria'
+            'email.required' => 'E-mail não pode ser vazio'
         ];
     }
 }
